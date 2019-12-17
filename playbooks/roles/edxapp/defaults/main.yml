@@ -1454,7 +1454,7 @@ cms_env_config:
   STATIC_URL_BASE: "{{ EDXAPP_CMS_STATIC_URL_BASE }}"
 
 # install dir for the edx-platform repo
-edxapp_code_dir: "{{ edxapp_app_dir }}/edx-platform"
+edxapp_code_dir: "{{ edxapp_app_dir }}/navoica-platform"
 
 
 # gunicorn ports/hosts, these shouldn't need to be overridden
@@ -1488,10 +1488,10 @@ edxapp_theme_source_repo: 'https://{{ COMMON_GIT_MIRROR }}/Stanford-Online/edx-t
 edxapp_theme_version: 'master'
 
 # make this the public URL instead of writable
-edx_platform_repo: "https://{{ COMMON_GIT_MIRROR }}/edx/edx-platform.git"
+edx_platform_repo: "https://{{ COMMON_GIT_MIRROR }}/OPI-PIB/navoica-platform.git"
 # `edx_platform_version` can be anything that git recognizes as a commit
 # reference, including a tag, a branch name, or a commit hash
-edx_platform_version: 'release'
+edx_platform_version: 'master'
 custom_requirements_file:   "{{ edxapp_code_dir }}/requirements/edx/custom.txt"
 base_requirements_file:   "{{ edxapp_code_dir }}/requirements/edx/base.txt"
 django_requirements_file:   "{{ edxapp_code_dir }}/requirements/edx/django.txt"

@@ -38,7 +38,7 @@ pycparser==2.18           # via cffi
 pycrypto==2.6.1
 pymongo==3.2.2
 pynacl==1.2.1             # via paramiko
-python-dateutil==2.7.3    # via botocore
+python-dateutil==2.4.0    # via botocore
 python-simple-hipchat==0.2
 pyyaml==3.12
 requests==2.18.4

@@ -8,8 +8,8 @@
 # with the currently checked-out configuration repo.
 
 ARG BASE_IMAGE_TAG=latest
-FROM edxops/xenial-common:${BASE_IMAGE_TAG}
-MAINTAINER edxops
+FROM navoica/xenial-common:${BASE_IMAGE_TAG}
+MAINTAINER navoica
 USER root
 CMD ["/edx/app/supervisor/venvs/supervisor/bin/supervisord", "-n", "--configuration", "/edx/app/supervisor/supervisord.conf"]
 
