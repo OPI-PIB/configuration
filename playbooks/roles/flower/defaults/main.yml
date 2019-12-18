@@ -24,7 +24,7 @@ flower_venv_dir: "{{ flower_app_dir }}/venvs/flower"
 flower_venv_bin: "{{ flower_venv_dir }}/bin"
 
 flower_python_reqs:
-# Celery version must match version used by edx-platform
+# Celery version must match version used by navoica-platform
   - "celery==3.1.18"
   - "flower==0.9.2"
   - "redis==2.10.6"

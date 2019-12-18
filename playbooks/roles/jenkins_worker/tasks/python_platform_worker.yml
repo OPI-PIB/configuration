@@ -1,20 +1,20 @@
 ---
 
-# Create a virtualenv for edx-platform by installing the requirements
+# Create a virtualenv for navoica-platform by installing the requirements
 # and packaging the virtualenv.
 # A shallow clone is created off of master. The depth setting
 # refers to the --depth-setting of git clone. A value of 1
 # will truncate all history prior to the last revision.
-- name: Create shallow clone of edx-platform
+- name: Create shallow clone of navoica-platform
   git:
-    repo: https://github.com/edx/edx-platform.git
+    repo: https://github.com/edx/navoica-platform.git
     dest: "{{ jenkins_home }}/shallow-clone"
     version: "{{ jenkins_edx_platform_version }}"
     depth: 1
   become_user: "{{ jenkins_user }}"
 
 # Install the platform requirements using pip.
-- name: Install edx-platform requirements using pip
+- name: Install navoica-platform requirements using pip
   pip:
     chdir: "{{ jenkins_home }}/shallow-clone"
     requirements: "{{ jenkins_home }}/shallow-clone/requirements/edx/{{ item }}"

@@ -110,7 +110,7 @@
   - Added `EDXAPP_DEFAULT_MOBILE_AVAILABLE` setting (defaults to `false`).
 
   - Added `EDX_PLATFORM_REVISION` (set from `edx_platform_version`). This is for
-  edx-platform debugging purposes, and replaces calling dealer.git at startup.
+  navoica-platform debugging purposes, and replaces calling dealer.git at startup.
 
 - Role: veda_pipeline_worker
   - New role to run all (`deliver, ingest, youtubecallback`) [video pipeline workers](https://github.com/edx/edx-video-pipeline/blob/master/bin/)
@@ -393,8 +393,8 @@
   - Ansible Changelog: https://github.com/ansible/ansible/blob/stable-1.9/CHANGELOG.md
 
 - Role: edxapp
-  - Removed deprecated variables EDXAPP_PLATFORM_TWITTER_URL, EDXAPP_PLATFORM_MEETUP_URL, EDXAPP_PLATFORM_LINKEDIN_URL, and EDXAPP_PLATFORM_GOOGLE_PLUS_URL in favor of EDXAPP_SOCIAL_MEDIA_FOOTER_URLS.  These variables haven't been used in edx-platform since March 17, 2015 (when https://github.com/edx/edx-platform/pull/7383 was merged).  This change is backwards incompatible with versions of edx-platform from before March 17, 2015.
-  - Added EDXAPP_MOBILE_STORE_URLS and EDXAPP_FOOTER_ORGANIZATION_IMAGE variables, used in https://github.com/edx/edx-platform/pull/8175 (v3 version of the edx.org footer).
+  - Removed deprecated variables EDXAPP_PLATFORM_TWITTER_URL, EDXAPP_PLATFORM_MEETUP_URL, EDXAPP_PLATFORM_LINKEDIN_URL, and EDXAPP_PLATFORM_GOOGLE_PLUS_URL in favor of EDXAPP_SOCIAL_MEDIA_FOOTER_URLS.  These variables haven't been used in navoica-platform since March 17, 2015 (when https://github.com/edx/navoica-platform/pull/7383 was merged).  This change is backwards incompatible with versions of navoica-platform from before March 17, 2015.
+  - Added EDXAPP_MOBILE_STORE_URLS and EDXAPP_FOOTER_ORGANIZATION_IMAGE variables, used in https://github.com/edx/navoica-platform/pull/8175 (v3 version of the edx.org footer).
 
 - Updated ansible fork with small bug fix.
   - https://github.com/ansible/ansible/pull/10957
@@ -488,7 +488,7 @@
 
 - Role: Edxapp
   - The repo.txt requirements file is no longer being processed in anyway.  This file was removed from edxplatform
-    via pull #3487(https://github.com/edx/edx-platform/pull/3487)
+    via pull #3487(https://github.com/edx/navoica-platform/pull/3487)
 
 - Update `CMS_HOSTNAME` default to allow any hostname that starts with `studio` along with `prod-studio` or `stage-studio`.
 

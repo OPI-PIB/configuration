@@ -27,7 +27,7 @@ VERSION_VARS = [
 ]
 
 MOUNT_DIRS = {
-  :edx_platform => {:repo => "edx-platform", :local => "/edx/app/edxapp/edx-platform", :owner => "edxapp"},
+  :edx_platform => {:repo => "navoica-platform", :local => "/edx/app/edxapp/navoica-platform", :owner => "edxapp"},
   :themes => {:repo => "themes", :local => "/edx/app/edxapp/themes", :owner => "edxapp"},
   :forum => {:repo => "cs_comments_service", :local => "/edx/app/forum/cs_comments_service", :owner => "forum"},
   :ecommerce => {:repo => "ecommerce", :local => "/edx/app/ecommerce/ecommerce", :owner => "ecommerce"},

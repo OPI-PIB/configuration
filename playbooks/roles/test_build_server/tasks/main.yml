@@ -20,10 +20,10 @@
 # Example play:
 #
 
-- name: Create clone of edx-platform
+- name: Create clone of navoica-platform
   git:
-    repo: "https://github.com/edx/edx-platform.git"
-    dest: "{{ test_build_server_repo_path }}/edx-platform-clone"
+    repo: "https://github.com/edx/navoica-platform.git"
+    dest: "{{ test_build_server_repo_path }}/navoica-platform-clone"
     version: "{{ test_edx_platform_version }}"
   become_user: "{{ test_build_server_user }}"
 

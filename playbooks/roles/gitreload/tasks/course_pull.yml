@@ -1,4 +1,4 @@
-# Tasks to run if cloning repos to edx-platform.
+# Tasks to run if cloning repos to navoica-platform.
 
 - name: clone all course repos
   git: dest={{ GITRELOAD_REPODIR }}/{{ item.name }} repo={{ item.url }} version={{ item.commit }}

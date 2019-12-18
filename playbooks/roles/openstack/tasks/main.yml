@@ -53,7 +53,7 @@
 # Install openstack python requirements into {{ edxapp_venv_dir }}
 - name : Install python requirements
   # Need to use command rather than pip so that we can maintain the context of our current working directory;
-  # some requirements are pathed relative to the edx-platform repo.
+  # some requirements are pathed relative to the navoica-platform repo.
   # Using the pip from inside the virtual environment implicitly installs everything into that virtual environment.
   command: "{{ edxapp_venv_dir }}/bin/pip install {{ COMMON_PIP_VERBOSITY }} -i {{ COMMON_PYPI_MIRROR_URL }} --exists-action w -r {{ openstack_requirements_file }}"
   args:

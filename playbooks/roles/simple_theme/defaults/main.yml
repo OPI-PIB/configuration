@@ -32,7 +32,7 @@ SIMPLETHEME_ENABLE_DEPLOY: False
 # EDXAPP_COMPREHENSIVE_THEME_DIRS.0 can be
 # "/edx/var/edxapp/themes" or
 # "/edx/app/edxapp/themes" or
-# "/edx/app/edxapp/themes/edx-platform"
+# "/edx/app/edxapp/themes/navoica-platform"
 # or any other.
 # If you have more than 1 theme dirs, you'll need to override this internal variable
 simpletheme_folder: "{{ EDXAPP_COMPREHENSIVE_THEME_DIRS.0 }}/{{ EDXAPP_DEFAULT_SITE_THEME }}"

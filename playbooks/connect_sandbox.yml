@@ -34,6 +34,6 @@
         - "EDXAPP_MONGO_PASSWORD: {{ EDXAPP_MONGO_PASSWORD }}"
       tags: update_edxapp_mysql_host
 
-    - name: call update on edx-platform
-      shell: "/edx/bin/update edx-platform {{ edxapp_version }}"
+    - name: call update on navoica-platform
+      shell: "/edx/bin/update navoica-platform {{ edxapp_version }}"
       tags: update_edxapp_mysql_host

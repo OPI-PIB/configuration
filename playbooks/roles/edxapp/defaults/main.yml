@@ -427,7 +427,7 @@ EDXAPP_CC_PROCESSOR:
 # does not affect verified students
 EDXAPP_PAID_COURSE_REGISTRATION_CURRENCY: ['usd', '$']
 
-# Configure paver tasks in edx-platform to skip Python/Ruby/Node installation
+# Configure paver tasks in navoica-platform to skip Python/Ruby/Node installation
 EDXAPP_NO_PREREQ_INSTALL: 1
 
 # whether to setup the python codejail or not
@@ -456,7 +456,7 @@ EDXAPP_GIT_IDENTITY: !!null
 
 EDXAPP_UPDATE_STATIC_FILES_KEY: false
 # Set this to true if you want to install the private pip
-# requirements in the edx-platform repo.
+# requirements in the navoica-platform repo.
 # This will use EDXAPP_GIT_IDENTITY, EDXAPP_USE_GIT_IDENTITY
 # must be set to true if EDXAPP_INSTALL_PRIVATE_REQUIREMENTS is
 # set to true
@@ -653,7 +653,7 @@ EDXAPP_CSRF_COOKIE_SECURE: false
 # E-Commerce Related Settings
 EDXAPP_ECOMMERCE_PUBLIC_URL_ROOT: "http://localhost:8002"
 EDXAPP_ECOMMERCE_API_URL: "http://localhost:8002/api/v2"
-# TODO (CCB) Remove this after all references in edx/edx-platform have been removed.
+# TODO (CCB) Remove this after all references in edx/navoica-platform have been removed.
 EDXAPP_ECOMMERCE_API_SIGNING_KEY: "{{ EDXAPP_JWT_SECRET_KEY }}"
 EDXAPP_COURSE_CATALOG_API_URL: "http://localhost:8008/api/v1"
 EDXAPP_CREDENTIALS_INTERNAL_SERVICE_URL: "http://localhost:8005"
@@ -1453,7 +1453,7 @@ cms_env_config:
   COURSE_IMPORT_EXPORT_BUCKET: "{{ EDXAPP_IMPORT_EXPORT_BUCKET }}"
   STATIC_URL_BASE: "{{ EDXAPP_CMS_STATIC_URL_BASE }}"
 
-# install dir for the edx-platform repo
+# install dir for the navoica-platform repo
 edxapp_code_dir: "{{ edxapp_app_dir }}/navoica-platform"
 
 
@@ -1465,7 +1465,7 @@ edxapp_lms_gunicorn_host: 127.0.0.1
 
 # These vars are for creating the application json config
 # files.  There are two for each service that uses the
-# 'edx-platform' code.  Defining them will create the upstart
+# 'navoica-platform' code.  Defining them will create the upstart
 # job.  It will also enable the corresponding section in the
 # 'edxapp' upstart job.
 
@@ -1500,7 +1500,7 @@ openstack_requirements_file: "{{ edxapp_code_dir }}/requirements/edx/openstack.t
 sandbox_base_requirements:  "{{ edxapp_code_dir }}/requirements/edx-sandbox/base.txt"
 
 # The Python requirements files in the order they should be installed.  This order should
-# match the order of PYTHON_REQ_FILES in edx-platform/pavelib/prereqs.py.
+# match the order of PYTHON_REQ_FILES in navoica-platform/pavelib/prereqs.py.
 edxapp_requirements_files:
   - "{{ custom_requirements_file }}"
   - "{{ base_requirements_file }}"

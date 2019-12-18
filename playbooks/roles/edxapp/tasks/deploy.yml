@@ -35,7 +35,7 @@
     - install:base
 
 # Do A Checkout
-- name: checkout edx-platform repo into {{ edxapp_code_dir }}
+- name: checkout navoica-platform repo into {{ edxapp_code_dir }}
   git:
     dest: "{{ edxapp_code_dir }}"
     repo: "{{ edx_platform_repo }}"
@@ -49,7 +49,7 @@
     - install
     - install:code
 
-- name: git clean after checking out edx-platform
+- name: git clean after checking out navoica-platform
   shell: cd {{ edxapp_code_dir }} && git clean -xdf
   become_user: "{{ edxapp_user }}"
   tags:
@@ -141,7 +141,7 @@
 # Install the python requirements into {{ edxapp_venv_dir }}
 - name: install python requirements
   # Need to use command rather than pip so that we can maintain the context of our current working directory; some
-  # requirements are pathed relative to the edx-platform repo. Using the pip from inside the virtual environment implicitly
+  # requirements are pathed relative to the navoica-platform repo. Using the pip from inside the virtual environment implicitly
   # installs everything into that virtual environment.
   command: "{{ edxapp_venv_dir }}/bin/pip install {{ COMMON_PIP_VERBOSITY }} -i {{ COMMON_PYPI_MIRROR_URL }} --exists-action w -r {{ item.item }}"
   args:
@@ -154,11 +154,11 @@
     - install
     - install:app-requirements
 
-# Private requriements require a ssh key to install, use the same key as the private key for edx-platform
+# Private requriements require a ssh key to install, use the same key as the private key for navoica-platform
 # If EDXAPP_INSTALL_PRIVATE_REQUIREMENTS is set to true EDXAPP_USE_GIT_IDENTITY must also be true
 - name: install python private requirements
   # Need to use shell rather than pip so that we can maintain the context of our current working directory; some
-  # requirements are pathed relative to the edx-platform repo. Using the pip from inside the virtual environment implicitly
+  # requirements are pathed relative to the navoica-platform repo. Using the pip from inside the virtual environment implicitly
   # installs everything into that virtual environment.
   shell: "{{ edxapp_venv_dir }}/bin/pip install {{ COMMON_PIP_VERBOSITY }} -i {{ COMMON_PYPI_MIRROR_URL }} --exists-action w {{ item.extra_args|default('') }} {{ item.name }}"
   args:
@@ -204,7 +204,7 @@
 # Install the sandbox python modules into {{ edxapp_venv_dir }}
 - name: install sandbox requirements into regular venv
   # Need to use shell rather than pip so that we can maintain the context of our current working directory; some
-  # requirements are pathed relative to the edx-platform repo. Using the pip from inside the virtual environment implicitly
+  # requirements are pathed relative to the navoica-platform repo. Using the pip from inside the virtual environment implicitly
   # installs everything into that virtual environment.
   shell: "{{ edxapp_venv_dir }}/bin/pip install {{ COMMON_PIP_VERBOSITY }} -i {{ COMMON_PYPI_MIRROR_URL }} --exists-action w -r {{ item }}"
   args:
@@ -290,7 +290,7 @@
     - install
     - install:app-requirements
 
-- name: compiling all py files in the edx-platform repo
+- name: compiling all py files in the navoica-platform repo
   shell: "{{ edxapp_venv_bin }}/python -m compileall -q -x '.git/.*|node_modules/.*' {{ edxapp_code_dir }}"
   become_user: "{{ edxapp_user }}"
   tags:

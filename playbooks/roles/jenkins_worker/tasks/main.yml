@@ -2,7 +2,7 @@
 # jenkins
 #
 # Provision a Jenkins worker instance.
-# - When platform_worker is set, the resulting instance can run edx-platform tests
+# - When platform_worker is set, the resulting instance can run navoica-platform tests
 
 # All jenkins workers
 - include: packer.yml
