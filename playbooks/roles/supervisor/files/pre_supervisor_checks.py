@@ -78,7 +78,7 @@ if __name__ == '__main__':
     migration_args = parser.add_argument_group("edxapp_migrations",
             "Args for running edxapp migration checks.")
     migration_args.add_argument("--edxapp-code-dir",
-            help="Location of the edx-platform code.")
+            help="Location of the navoica-platform code.")
     migration_args.add_argument("--edxapp-python",
             help="Path to python to use for executing migration check.")
     migration_args.add_argument("--edxapp-env",
@@ -246,7 +246,7 @@ if __name__ == '__main__':
                     "ecommerce": {'python': args.ecommerce_python, 'env_file': args.ecommerce_env, 'code_dir': args.ecommerce_code_dir},
                     "credentials": {'python': args.credentials_python, 'env_file': args.credentials_env, 'code_dir': args.credentials_code_dir},
                     "discovery": {'python': args.discovery_python, 'env_file': args.discovery_env, 'code_dir': args.discovery_code_dir},
-                    "journals": {'python': args.journals_python, 'env_file': args.journals_env, 'code_dir': args.journals_code_dir},                    
+                    "journals": {'python': args.journals_python, 'env_file': args.journals_env, 'code_dir': args.journals_code_dir},
                     "insights": {'python': args.insights_python, 'env_file': args.insights_env, 'code_dir': args.insights_code_dir},
                     "analytics_api": {'python': args.analytics_api_python, 'env_file': args.analytics_api_env, 'code_dir': args.analytics_api_code_dir},
                     "xqueue": {'python': args.xqueue_python, 'env_file': args.xqueue_env, 'code_dir': args.xqueue_code_dir},

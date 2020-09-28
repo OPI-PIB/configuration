@@ -6,7 +6,7 @@
 *~
 .#*
 
-vagrant/*/*/edx-platform
+vagrant/*/*/navoica-platform
 vagrant/*/*/cs_comments_service
 vagrant/*/*/ora
 vagrant/*/*/analytics_api

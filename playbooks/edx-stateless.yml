@@ -40,7 +40,7 @@
       - lms
 
     # Main EdX application
-    # https://github.com/edx/edx-platform
+    # https://github.com/edx/navoica-platform
     - role: edxapp
       celery_worker: True
     - edxapp

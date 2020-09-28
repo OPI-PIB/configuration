@@ -10,7 +10,7 @@ localdev_accounts:
         user: "{{ edxapp_user|default('None') }}",
         home: "{{ edxapp_app_dir|default('None') }}",
         env: "edxapp_env",
-        repo: "edx-platform"
+        repo: "navoica-platform"
       }
 
     - {
